@@ -40,6 +40,29 @@ section.main-project .project-year div:last-child{}
 /* Project End */
 section.main-project .project-name{}
 
+  .eye {
+	position: absolute;
+    width: 5rem;
+    height: 2.5rem;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  .eye1 {
+	top: 38%;
+    left: 37.5%;
+  }
+  .eye2 {
+    top: 36%;
+    left: 66.5%;
+  }
+  #eyeball {
+	transition: transform 0.5s linear;
+  }
+  
+  #pupill {
+	transition: transform 0.6s linear;
+  }
+
+
 
 
 
