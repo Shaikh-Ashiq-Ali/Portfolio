@@ -1,0 +1,49 @@
+*{margin: 0px;padding: 0px;box-sizing: border-box;}
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+/*body{background-color: #121213;font-family: 'Roboto',sans-serif;color: #fff;}*/
+body{background-color: #121213;font-family: 'Vollkorn',sans-serif;color: #fff;}
+
+a:hover{text-decoration: unset;}
+
+/* Navbar Start */
+	section.custom-navbar{background-color: #1d1b1b; width: max-content; position: absolute;
+	left: 50%; top: 8%; padding: 15px 20px; transform: translateX(-50%);box-shadow: 1px 1px 10px #03e9f4;overflow: hidden;
+	    border-radius: 50px;}
+	.custom-navbar ul li{position: relative;margin-right: 5px;}
+	.custom-navbar ul{display: inline-flex;list-style: none;margin: 0px;}
+	.custom-navbar ul li a{display: block;padding: 10px 15px;color: #fff;width: 115px;text-align: center;text-transform: capitalize;}
+	.custom-navbar ul li:last-child{margin-right: 0px;}
+
+	.custom-navbar ul li a:before{content: '';position: absolute;left: -5px;bottom: 0;width: 0;height: 0;}
+	.custom-navbar ul li a:hover:before{width: calc(100% + 10px);height: 100%;border: 2px solid #03e9f470;
+	transition: height 1s,width 1s 1s; border-right: none;border-bottom:none;border-radius: 50px;}
+
+	.custom-navbar ul li a:after{content: '';position: absolute;right: -5px;top: 0;width: 0;height: 0;}
+	.custom-navbar ul li a:hover:after{width: calc(100% + 10px);height: 100%;border: 2px solid #03e9f470;
+	transition: height 1s,width 1s 1s; border-top: none; border-left:none;border-radius: 50px;}
+/* Navbar End */
+
+section.main-content{display: flex; align-items: center; justify-content: center; height: 100vh;}
+section.main-content .greeting .greeting-text span{color: #03e9f4}
+
+/* Project Start */
+
+section.main-project{display: flex; align-items: center; justify-content: center;margin-top: 12%;/*height: 80vh;*/}
+section.main-project .project-year{display: flex; align-items: center; justify-content: space-between;flex-direction: column;}
+section.main-project .project-year .dot{display: flex;align-items: center;justify-content: center;flex-direction: column;overflow: hidden;}
+section.main-project .project-year div:first-child{}
+section.main-project .project-year div:last-child{}
+/* Project End */
+section.main-project .project-name{}
+
+
+
+
+
+
+
+
