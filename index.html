@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -19,17 +16,7 @@
 
   <body>
    
-  	<section class="custom-navbar">
-  		<div>
-  			<ul>
-  				<li><a href="javascript:void(0);">Home</a></li>
-  				<li><a href="skills.html">Skills</a></li>
-          <li><a href="project.html">Project</a></li>
-  				<li><a href="javascript:void(0);">About</a></li>
-  				<li><a href="javascript:void(0);">Contact Us</a></li>
-  			</ul>
-  		</div>
-  	</section>
+  	<script src="js/navbar.js"></script>
 
     <section class="main-content">
         <div class="container-fluid">
@@ -37,12 +24,15 @@
               <div class="greeting-text ml-5">
                 <h5 class="">Hello, My name is</h5>
                 <p class="display-3 mb-0">Shaikh Ashiq Ali</p>
-                <h4>And I'am a <span> Web Developer</span></h4>
+                <h4>And I'am a <span class="sec-text h1" style="color: #03e9f4;"> Web Developer</span></h4>
+                <div>
+                  Instagram icons
+                </div>
               </div>
           </div>
         </div>
-        <div class="h-100 w-100 position-relative ">
-        <img class="img-fluid h-100 w-100 " src="images/person2.png" alt="">
+        <div class="h-100 w-100 position-relative d-flex align-items-center mt-5">
+        <img class="img-fluid w-100 " src="images/person2.png" alt="">
         <div class="eye eye1">
           <svg width="100%" height="100%" viewBox="0 0 102 102" fill="none">
             <mask id="mask">
@@ -70,11 +60,31 @@
       </div>
     </section>
 
+   
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script>
+      const text = document.querySelector('.sec-text');
+      // console.log(text);
+      const textLoad = () => {
+        setTimeout(() => {
+          text.textContent = "Developer";
+        } , 0);
+        setTimeout(() => {
+          text.textContent = "Freelancer";
+        } , 4000);
+        setTimeout(() => {
+          text.textContent = "Designer";
+        } , 8000);
+      }
+      textLoad();
+      setInterval(textLoad, 12000);
+    </script>
     <script>
       $(window).mousemove(function (e) {
         let rect = $(".eye1 #eyeball,.eye2 #eyeball")[0].getBoundingClientRect();
