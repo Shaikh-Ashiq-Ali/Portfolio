@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<title>Ashiq Ali Shaikh — Full Stack Developer</title>
+<meta name="description" content="Full Stack Developer with 7+ years of experience building scalable web applications, ERP systems, and business-focused solutions — from Core PHP to the MERN stack.">
+<link rel="stylesheet" href="_ds/nocturne-9fbc117a-d6a5-41b3-a833-ac9560842e5c/styles.css">
+<style>
+  html { scroll-behavior: auto; }
+  body { margin: 0; }
+  a { color: var(--color-text); }
+  a:hover { color: var(--color-accent-300); }
+  @keyframes dlgIn { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: none; } }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: var(--color-bg); }
+  ::-webkit-scrollbar-thumb { background: var(--color-neutral-800); border-radius: 8px; }
+  .dialog-backdrop[hidden] { display: none; }
+  .skill-card { transition: border-color .3s; }
+  .skill-card:hover { border-color: var(--color-accent-700); }
+  .proj-link { transition: border-color .2s, color .2s; }
+  .proj-link:hover { border-color: var(--color-accent); color: var(--color-accent-300); }
+  .eyebrow { display:flex;align-items:center;gap:12px;margin-bottom:20px;font-size:13px;letter-spacing:.14em;color:var(--color-accent-300); }
+  .eyebrow i { width:40px;height:1px;background:var(--color-accent); }
+  .h2 { margin:0;padding-bottom:.14em;font-size:clamp(36px,5.5vw,72px);line-height:1.02;letter-spacing:-0.025em;font-weight:500; }
+  .float-tag { backdrop-filter:blur(10px);background:color-mix(in srgb, var(--color-bg) 55%, transparent);box-shadow:var(--shadow-md); }
+</style>
 </head>
 <body>
-<x-dc>
-<helmet>
-  <link rel="stylesheet" href="_ds/nocturne-9fbc117a-d6a5-41b3-a833-ac9560842e5c/styles.css">
-  <script src="_ds/nocturne-9fbc117a-d6a5-41b3-a833-ac9560842e5c/_ds_bundle.js"></script>
-  <style>
-    html { scroll-behavior: auto; }
-    body { margin: 0; }
-    a { color: var(--color-text); }
-    a:hover { color: var(--color-accent-300); }
-    @keyframes dlgIn { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: none; } }
-    ::-webkit-scrollbar { width: 10px; }
-    ::-webkit-scrollbar-track { background: var(--color-bg); }
-    ::-webkit-scrollbar-thumb { background: var(--color-neutral-800); border-radius: 8px; }
-  </style>
-</helmet>
+<div id="root" style="background: var(--color-bg); color: var(--color-text); min-height: 100vh; overflow-x: clip; position: relative">
 
-<div ref="{{ refRoot }}" style="background: var(--color-bg); color: var(--color-text); min-height: 100vh; overflow-x: clip; position: relative">
-
-  <div ref="{{ refBar }}" style="position:fixed;top:0;left:0;right:0;height:2px;background:var(--color-accent);transform-origin:left;transform:scaleX(0);z-index:60;box-shadow:0 0 12px var(--color-accent)"></div>
-  <div ref="{{ refGlow }}" style="position:fixed;top:0;left:0;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle, color-mix(in srgb, var(--color-accent) 13%, transparent), transparent 62%);pointer-events:none;z-index:0;opacity:0;transition:opacity .6s"></div>
-  <div ref="{{ refBlob1 }}" style="position:absolute;top:-8%;right:-12%;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle, var(--color-accent-900), transparent 70%);filter:blur(24px);opacity:.55;pointer-events:none;z-index:0"></div>
-  <div ref="{{ refBlob2 }}" style="position:absolute;top:55%;left:-15%;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle, var(--color-accent-900), transparent 70%);filter:blur(30px);opacity:.35;pointer-events:none;z-index:0"></div>
+  <div id="bar" style="position:fixed;top:0;left:0;right:0;height:2px;background:var(--color-accent);transform-origin:left;transform:scaleX(0);z-index:60;box-shadow:0 0 12px var(--color-accent)"></div>
+  <div id="glow" style="position:fixed;top:0;left:0;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle, color-mix(in srgb, var(--color-accent) 13%, transparent), transparent 62%);pointer-events:none;z-index:0;opacity:0;transition:opacity .6s"></div>
+  <div id="blob1" style="position:absolute;top:-8%;right:-12%;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle, var(--color-accent-900), transparent 70%);filter:blur(24px);opacity:.55;pointer-events:none;z-index:0"></div>
+  <div id="blob2" style="position:absolute;top:55%;left:-15%;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle, var(--color-accent-900), transparent 70%);filter:blur(30px);opacity:.35;pointer-events:none;z-index:0"></div>
 
   <nav class="nav" style="position:fixed;top:0;left:0;right:0;z-index:50;flex-wrap:wrap;backdrop-filter:blur(12px);background:color-mix(in srgb, var(--color-bg) 78%, transparent);border-bottom:1px solid var(--color-divider);padding-inline:5vw">
-    <div class="nav-brand">Ashiq<font color="#9184d9">&nbsp;Ali Shaikh</font></div>
+    <div class="nav-brand">Ashiq<span style="color:var(--color-accent)">&nbsp;Ali Shaikh</span></div>
     <a href="#about" data-nav="about" style="transition:color .3s">About</a>
     <a href="#skills" data-nav="skills" style="transition:color .3s">Skills</a>
     <a href="#experience" data-nav="experience" style="transition:color .3s">Experience</a>
@@ -39,8 +44,8 @@
     <a class="btn btn-primary" data-magnetic="1" href="uploads/resume.pdf" download="Ashiq-Ali-Shaikh-Resume.pdf" style="margin-left:8px">Resume</a>
   </nav>
 
-  <section id="hero" style="min-height:100vh;display:flex;flex-wrap:wrap;align-items:center;gap:20px;padding:120px 5vw 110px;position:relative;z-index:1;justify-content:space-between;box-sizing:border-box" data-om-label="About">
-    <div ref="{{ refHeroText }}" style="flex:1 1 420px;min-width:280px;will-change:transform,opacity">
+  <section id="hero" style="min-height:100vh;display:flex;flex-wrap:wrap;align-items:center;gap:20px;padding:120px 5vw 110px;position:relative;z-index:1;justify-content:space-between;box-sizing:border-box">
+    <div id="heroText" style="flex:1 1 420px;min-width:280px;will-change:transform,opacity">
       <div data-reveal="up" data-delay="0" class="tag tag-outline" style="margin-bottom:24px">PHP FULL STACK &amp; JR. MERN STACK DEVELOPER</div>
       <h1 style="font-size:clamp(56px,9vw,136px);line-height:.95;letter-spacing:-0.035em;font-weight:500;margin:0 0 28px">
         <span style="display:block;overflow:hidden;padding-bottom:.06em"><span data-reveal="mask" data-delay="0.1" style="display:block">Ashiq Ali</span></span>
@@ -61,7 +66,7 @@
         <span>+91 9699286510</span>
       </div>
     </div>
-    <div ref="{{ refStage }}" style="flex:1 1 300px;max-width:520px;min-width:0;width:100%;aspect-ratio:4/5;position:relative">
+    <div id="stage" style="flex:1 1 300px;max-width:520px;min-width:0;width:100%;aspect-ratio:4/5;position:relative">
       <div data-depth="12" style="position:absolute;left:6%;right:6%;top:8%;aspect-ratio:1;will-change:transform">
         <div data-reveal="scale" data-delay="0.15" style="width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 50% 42%, var(--color-accent-600), var(--color-accent-800) 48%, color-mix(in srgb, var(--color-accent-900) 60%, transparent) 64%, transparent 72%)"></div>
       </div>
@@ -74,17 +79,17 @@
         </div>
       </div>
       <div data-depth="40" style="position:absolute;left:-2%;top:26%;will-change:transform">
-        <div data-reveal="up" data-delay="0.7" class="tag tag-outline" style="backdrop-filter:blur(10px);background:color-mix(in srgb, var(--color-bg) 55%, transparent);box-shadow:var(--shadow-md)">Core PHP</div>
+        <div data-reveal="up" data-delay="0.7" class="tag tag-outline float-tag">Core PHP</div>
       </div>
       <div data-depth="52" style="position:absolute;right:-2%;top:16%;will-change:transform">
-        <div data-reveal="up" data-delay="0.8" class="tag tag-outline" style="backdrop-filter:blur(10px);background:color-mix(in srgb, var(--color-bg) 55%, transparent);box-shadow:var(--shadow-md)">ReactJS</div>
+        <div data-reveal="up" data-delay="0.8" class="tag tag-outline float-tag">ReactJS</div>
       </div>
       <div data-depth="32" style="position:absolute;right:0;top:54%;will-change:transform">
-        <div data-reveal="up" data-delay="0.9" class="tag tag-outline" style="backdrop-filter:blur(10px);background:color-mix(in srgb, var(--color-bg) 55%, transparent);box-shadow:var(--shadow-md)">MongoDB</div>
+        <div data-reveal="up" data-delay="0.9" class="tag tag-outline float-tag">MongoDB</div>
       </div>
       <div data-depth="28" style="position:absolute;left:-4%;bottom:12%;width:116px;height:116px;will-change:transform">
         <div data-reveal="scale" data-delay="1" style="width:100%;height:100%;border-radius:50%;backdrop-filter:blur(10px);background:color-mix(in srgb, var(--color-bg) 65%, transparent);border:1px solid var(--color-divider);box-shadow:var(--shadow-md);position:relative">
-          <div ref="{{ refBadge }}" style="position:absolute;inset:0;will-change:transform">
+          <div id="badge" style="position:absolute;inset:0;will-change:transform">
             <svg viewBox="0 0 120 120" style="width:100%;height:100%;display:block">
               <defs><path id="heroCirc" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"></path></defs>
               <text style="font-size:9.5px;letter-spacing:2px;fill:var(--color-text);font-family:var(--font-heading)"><textPath href="#heroCirc" textLength="272">FULL STACK DEVELOPER · 7+ YEARS · </textPath></text>
@@ -100,12 +105,10 @@
     </div>
   </section>
 
-  <section id="about" style="padding:140px 5vw;position:relative;z-index:1;display:flex;gap:56px;flex-wrap:wrap-reverse;align-items:center" data-om-label="Summary">
+  <section id="about" style="padding:140px 5vw;position:relative;z-index:1;display:flex;gap:56px;flex-wrap:wrap-reverse;align-items:center">
     <div style="max-width:680px;flex:2 1 420px">
-      <div data-reveal="up" style="display:flex;align-items:center;gap:12px;margin-bottom:20px;font-size:13px;letter-spacing:.14em;color:var(--color-accent-300)">
-        <span>01</span><span style="width:40px;height:1px;background:var(--color-accent)"></span><span>ABOUT</span>
-      </div>
-      <div style="overflow:hidden;margin-bottom:28px"><h2 data-reveal="mask" style="margin:0;padding-bottom:.14em;font-size:clamp(36px,5.5vw,72px);line-height:1.02;letter-spacing:-0.025em;font-weight:500">Summary</h2></div>
+      <div data-reveal="up" class="eyebrow"><span>01</span><i></i><span>ABOUT</span></div>
+      <div style="overflow:hidden;margin-bottom:28px"><h2 data-reveal="mask" class="h2">Summary</h2></div>
       <p data-reveal="up" data-delay="0.1" style="font-size:17px;line-height:1.75;margin:0;color:color-mix(in srgb, var(--color-text) 85%, transparent);text-wrap:pretty">
         Full Stack Developer with 7+ years of experience, specializing in Core PHP (4.5 years), Laravel (6 months), and frontend technologies (HTML, CSS, JavaScript, jQuery — 2.5 years). Also experienced in the MERN stack with 1 year in ReactJS, ExpressJS, and NodeJS. Skilled in developing scalable web applications, ERP systems, and business-focused solutions. Strong in clean coding and problem-solving. Currently enhancing expertise in AI and emerging technologies to deliver innovative, future-ready solutions.
       </p>
@@ -124,142 +127,61 @@
       </div>
     </div>
     <div data-reveal="scale" data-delay="0.1" style="flex:1 1 260px;min-width:0;display:flex;justify-content:center;align-items:center;min-height:260px">
-      <div ref="{{ setCanvasHost }}" style="width:100%;max-width:420px;aspect-ratio:1;position:relative"></div>
+      <div id="canvasHost" style="width:100%;max-width:420px;aspect-ratio:1;position:relative"></div>
     </div>
   </section>
 
-  <sc-if value="{{ showMarquee }}" hint-placeholder-val="{{ true }}">
-    <div style="position:relative;z-index:1;overflow:hidden;padding:24px 0 120px;display:flex;flex-direction:column;gap:8px;font-size:clamp(48px,8vw,120px);font-weight:500;letter-spacing:-0.03em;line-height:1.1">
-      <div ref="{{ refRow1 }}" style="display:flex;width:max-content;white-space:nowrap;will-change:transform;color:var(--color-neutral-300)">
-        <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="8">
-          <span style="display:flex;align-items:center;gap:.4em;padding-right:.4em">{{ m }}<span style="width:.18em;height:.18em;border-radius:50%;background:var(--color-accent)"></span></span>
-        </sc-for>
-      </div>
-      <div ref="{{ refRow2 }}" style="display:flex;width:max-content;white-space:nowrap;will-change:transform;color:transparent;-webkit-text-stroke:1px var(--color-neutral-500)">
-        <sc-for list="{{ marquee2 }}" as="m" hint-placeholder-count="8">
-          <span style="display:flex;align-items:center;gap:.4em;padding-right:.4em">{{ m }}<span style="width:.18em;height:.18em;border-radius:50%;border:1px solid var(--color-accent)"></span></span>
-        </sc-for>
-      </div>
-    </div>
-  </sc-if>
+  <div style="position:relative;z-index:1;overflow:hidden;padding:24px 0 120px;display:flex;flex-direction:column;gap:8px;font-size:clamp(48px,8vw,120px);font-weight:500;letter-spacing:-0.03em;line-height:1.1" aria-hidden="true">
+    <div id="row1" style="display:flex;width:max-content;white-space:nowrap;will-change:transform;color:var(--color-neutral-300)"></div>
+    <div id="row2" style="display:flex;width:max-content;white-space:nowrap;will-change:transform;color:transparent;-webkit-text-stroke:1px var(--color-neutral-500)"></div>
+  </div>
 
-  <section id="skills" style="padding:0 5vw 140px;position:relative;z-index:1" data-om-label="Skills">
-    <div data-reveal="up" style="display:flex;align-items:center;gap:12px;margin-bottom:20px;font-size:13px;letter-spacing:.14em;color:var(--color-accent-300)">
-      <span>02</span><span style="width:40px;height:1px;background:var(--color-accent)"></span><span>SKILLS</span>
-    </div>
-    <div style="overflow:hidden;margin-bottom:40px"><h2 data-reveal="mask" style="margin:0;padding-bottom:.14em;font-size:clamp(36px,5.5vw,72px);line-height:1.02;letter-spacing:-0.025em;font-weight:500">Technical Skills</h2></div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
-      <sc-for list="{{ skillGroups }}" as="group" hint-placeholder-count="5">
-        <div data-reveal="up" data-delay="{{ group.delay }}" class="card elev-sm" style="transition:border-color .3s" style-hover="border-color:var(--color-accent-700)">
-          <div class="card-kicker">{{ group.label }}</div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px">
-            <sc-for list="{{ group.items }}" as="skill" hint-placeholder-count="4">
-              <span class="tag tag-neutral">{{ skill }}</span>
-            </sc-for>
-          </div>
-        </div>
-      </sc-for>
-    </div>
+  <section id="skills" style="padding:0 5vw 140px;position:relative;z-index:1">
+    <div data-reveal="up" class="eyebrow"><span>02</span><i></i><span>SKILLS</span></div>
+    <div style="overflow:hidden;margin-bottom:40px"><h2 data-reveal="mask" class="h2">Technical Skills</h2></div>
+    <div id="skillsGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px"></div>
   </section>
 
-  <section id="experience" style="padding:0 5vw 140px;position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start" data-om-label="Experience">
+  <section id="experience" style="padding:0 5vw 140px;position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start">
     <div style="flex:1 1 280px;position:sticky;top:110px">
-      <div data-reveal="up" style="display:flex;align-items:center;gap:12px;margin-bottom:20px;font-size:13px;letter-spacing:.14em;color:var(--color-accent-300)">
-        <span>03</span><span style="width:40px;height:1px;background:var(--color-accent)"></span><span>EXPERIENCE</span>
-      </div>
-      <div style="overflow:hidden"><h2 data-reveal="mask" style="margin:0;padding-bottom:.14em;font-size:clamp(36px,5.5vw,72px);line-height:1.02;letter-spacing:-0.025em;font-weight:500">Professional Experience</h2></div>
+      <div data-reveal="up" class="eyebrow"><span>03</span><i></i><span>EXPERIENCE</span></div>
+      <div style="overflow:hidden"><h2 data-reveal="mask" class="h2">Professional Experience</h2></div>
     </div>
-    <div ref="{{ refExpList }}" style="flex:2 1 420px;min-width:0;max-width:760px;position:relative;display:flex;flex-direction:column;gap:44px">
+    <div id="expList" style="flex:2 1 420px;min-width:0;max-width:760px;position:relative;display:flex;flex-direction:column;gap:44px">
       <div style="position:absolute;left:4px;top:8px;bottom:0;width:1px;background:linear-gradient(180deg, var(--color-divider), var(--color-divider) 85%, transparent)"></div>
-      <div ref="{{ refExpFill }}" style="position:absolute;left:4px;top:8px;bottom:0;width:1px;background:linear-gradient(180deg, var(--color-accent), var(--color-accent) 85%, transparent);transform-origin:top;transform:scaleY(0);box-shadow:0 0 8px var(--color-accent)"></div>
-      <sc-for list="{{ experience }}" as="job" hint-placeholder-count="6">
-        <div data-reveal="up" style="position:relative;padding-left:40px">
-          <div data-dot="1" style="position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:50%;background:var(--color-neutral-700);transition:background .4s, box-shadow .4s"></div>
-          <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:6px">
-            <h4 style="margin:0;font-size:20px">{{ job.role }}</h4>
-            <span style="font-size:13px;color:var(--color-accent-300);font-family:var(--font-heading);white-space:nowrap">{{ job.dates }}</span>
-          </div>
-          <div style="font-size:14px;color:color-mix(in srgb, var(--color-text) 60%, transparent);margin-bottom:12px">{{ job.company }}</div>
-          <ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.75;color:color-mix(in srgb, var(--color-text) 78%, transparent)">
-            <sc-for list="{{ job.bullets }}" as="bullet" hint-placeholder-count="3">
-              <li>{{ bullet }}</li>
-            </sc-for>
-          </ul>
-        </div>
-      </sc-for>
+      <div id="expFill" style="position:absolute;left:4px;top:8px;bottom:0;width:1px;background:linear-gradient(180deg, var(--color-accent), var(--color-accent) 85%, transparent);transform-origin:top;transform:scaleY(0);box-shadow:0 0 8px var(--color-accent)"></div>
     </div>
   </section>
 
-  <section id="projects" ref="{{ refPin }}" style="position:relative;z-index:1;height:300vh" data-om-label="Project">
+  <section id="projects" style="position:relative;z-index:1;height:300vh">
     <div style="position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;gap:24px;padding-top:56px;box-sizing:border-box">
       <div style="padding-inline:5vw;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
         <div>
-          <div data-reveal="up" style="display:flex;align-items:center;gap:12px;margin-bottom:20px;font-size:13px;letter-spacing:.14em;color:var(--color-accent-300)">
-            <span>04</span><span style="width:40px;height:1px;background:var(--color-accent)"></span><span>PROJECTS</span>
-          </div>
-          <div style="overflow:hidden"><h2 data-reveal="mask" style="margin:0;padding-bottom:.14em;font-size:clamp(36px,5.5vw,72px);line-height:1.02;letter-spacing:-0.025em;font-weight:500">Project Highlights</h2></div>
+          <div data-reveal="up" class="eyebrow"><span>04</span><i></i><span>PROJECTS</span></div>
+          <div style="overflow:hidden"><h2 data-reveal="mask" class="h2">Project Highlights</h2></div>
         </div>
         <div data-reveal="up" style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;min-width:160px">
-          <div style="font-size:14px;font-family:var(--font-heading);color:color-mix(in srgb, var(--color-text) 60%, transparent)"><span ref="{{ refProjCount }}" style="color:var(--color-text);font-size:22px">01</span> / {{ projectTotal }}</div>
+          <div style="font-size:14px;font-family:var(--font-heading);color:color-mix(in srgb, var(--color-text) 60%, transparent)"><span id="projCount" style="color:var(--color-text);font-size:22px">01</span> / <span id="projTotal"></span></div>
           <div style="width:160px;height:1px;background:var(--color-divider);position:relative;overflow:hidden">
-            <div ref="{{ refProjBar }}" style="position:absolute;inset:0;background:var(--color-accent);transform-origin:left;transform:scaleX(0)"></div>
+            <div id="projBar" style="position:absolute;inset:0;background:var(--color-accent);transform-origin:left;transform:scaleX(0)"></div>
           </div>
         </div>
       </div>
-      <div ref="{{ refTrack }}" style="display:flex;gap:20px;width:max-content;padding-inline:5vw;will-change:transform">
-        <sc-for list="{{ projects }}" as="proj" hint-placeholder-count="6">
-          <div data-reveal="right" data-delay="{{ proj.delay }}" style="flex:none;width:min(440px,82vw)">
-            <div class="card elev-md" style="height:min(540px,calc(100vh - 230px));min-height:320px;box-sizing:border-box;display:flex;flex-direction:column;cursor:pointer;transition:transform .5s cubic-bezier(.16,1,.3,1), border-color .3s;will-change:transform" onMouseMove="{{ onCardMove }}" onMouseLeave="{{ onCardLeave }}" onClick="{{ proj.onOpen }}">
-              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
-                <span style="font-size:40px;line-height:1;font-weight:500;letter-spacing:-0.03em;color:var(--color-neutral-700)">{{ proj.num }}</span>
-                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;min-width:0">
-                  <span class="card-kicker" style="text-align:right">{{ proj.kicker }}</span>
-                  <sc-if value="{{ proj.link }}" hint-placeholder-val="{{ false }}">
-                    <a href="{{ proj.link }}" target="_blank" rel="noopener" onClick="{{ stop }}" style="display:flex;align-items:center;gap:8px;padding:5px 10px 5px 6px;border:1px solid var(--color-divider);border-radius:999px;font-size:12px;text-decoration:none;color:var(--color-text);background:color-mix(in srgb, var(--color-bg) 60%, transparent);transition:border-color .2s, color .2s;max-width:100%" style-hover="border-color:var(--color-accent);color:var(--color-accent-300)">
-                      <img src="{{ proj.favicon }}" alt="" style="width:18px;height:18px;border-radius:4px;background:var(--color-neutral-200);flex:none;object-fit:contain">
-                      <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ proj.host }}</span>
-                      <span style="flex:none">↗</span>
-                    </a>
-                  </sc-if>
-                </div>
-              </div>
-              <div style="flex:1;display:flex;flex-direction:column;gap:10px;margin-top:10px;min-height:0;overflow:hidden">
-                <div class="card-title" style="font-size:24px;letter-spacing:-0.015em;margin:0">{{ proj.name }}</div>
-                <p class="card-body" style="margin:0;text-wrap:pretty;flex:none">{{ proj.summary }}</p>
-                <sc-if value="{{ proj.hasDetails }}" hint-placeholder-val="{{ true }}">
-                  <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:13px;line-height:1.45;color:color-mix(in srgb, var(--color-text) 72%, transparent)">
-                    <sc-for list="{{ proj.detailsPreview }}" as="d" hint-placeholder-count="3">
-                      <li style="display:flex;gap:10px"><span style="flex:none;width:5px;height:5px;margin-top:7px;border-radius:50%;background:var(--color-accent)"></span><span style="text-wrap:pretty;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden"><strong style="font-weight:500;color:var(--color-text)">{{ d.b }}</strong> {{ d.t }}</span></li>
-                    </sc-for>
-                  </ul>
-                </sc-if>
-              </div>
-              <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;flex:none">
-                <sc-for list="{{ proj.techPreview }}" as="t" hint-placeholder-count="4">
-                  <span class="tag tag-accent-2">{{ t }}</span>
-                </sc-for>
-              </div>
-              <div class="card-meta" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--color-divider);color:var(--color-accent-300)">View details →</div>
-            </div>
-          </div>
-        </sc-for>
-      </div>
+      <div id="track" style="display:flex;gap:20px;width:max-content;padding-inline:5vw;will-change:transform"></div>
     </div>
   </section>
 
   <section id="contact" style="padding:160px 0 100px;position:relative;z-index:1">
-    <div ref="{{ refContactText }}" style="font-size:clamp(56px,11vw,180px);font-weight:500;line-height:1;letter-spacing:-0.035em;white-space:nowrap;padding-inline:5vw;margin-bottom:48px;will-change:transform">Let's work together <span style="color:var(--color-accent)">→</span></div>
+    <div id="contactText" style="font-size:clamp(56px,11vw,180px);font-weight:500;line-height:1;letter-spacing:-0.035em;white-space:nowrap;padding-inline:5vw;margin-bottom:48px;will-change:transform">Let's work together <span style="color:var(--color-accent)">→</span></div>
     <div style="padding-inline:5vw">
-      <div data-reveal="up" style="display:flex;align-items:center;gap:12px;margin-bottom:20px;font-size:13px;letter-spacing:.14em;color:var(--color-accent-300)">
-        <span>05</span><span style="width:40px;height:1px;background:var(--color-accent)"></span><span>CONTACT</span>
-      </div>
+      <div data-reveal="up" class="eyebrow"><span>05</span><i></i><span>CONTACT</span></div>
       <p data-reveal="up" data-delay="0.08" style="max-width:520px;font-size:17px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 78%, transparent);margin:0 0 32px">
         Open to full stack, PHP, and MERN opportunities. Reach out directly or grab the resume.
       </p>
       <div data-reveal="up" data-delay="0.16" style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px">
         <a href="mailto:shaikhashiqali12345@gmail.com" class="btn btn-primary" data-magnetic="1">Email Me</a>
-        <a href="https://linkedin.com/in/shaikhashiqali12345" target="_blank" class="btn btn-secondary" data-magnetic="1">LinkedIn</a>
-        <a href="https://github.com/Shaikh-Ashiq-Ali" target="_blank" class="btn btn-secondary" data-magnetic="1">GitHub</a>
+        <a href="https://linkedin.com/in/shaikhashiqali12345" target="_blank" rel="noopener" class="btn btn-secondary" data-magnetic="1">LinkedIn</a>
+        <a href="https://github.com/Shaikh-Ashiq-Ali" target="_blank" rel="noopener" class="btn btn-secondary" data-magnetic="1">GitHub</a>
         <a href="uploads/resume.pdf" download="Ashiq-Ali-Shaikh-Resume.pdf" class="btn btn-secondary" data-magnetic="1">Download Resume</a>
       </div>
       <div data-reveal="up" data-delay="0.24" style="display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent)">
@@ -273,446 +195,408 @@
     <span>© 2026 Ashiq Ali Shaikh</span>
   </footer>
 
-  <sc-if value="{{ activeProject }}" hint-placeholder-val="{{ false }}">
-    <div class="dialog-backdrop" style="z-index:100" onClick="{{ closeProject }}">
-      <div class="dialog" style="max-width:600px;max-height:86vh;overflow-y:auto;overscroll-behavior:contain;animation:dlgIn .5s cubic-bezier(.16,1,.3,1) both" onClick="{{ stop }}">
-        <div class="dialog-title">{{ activeProject.name }}</div>
-        <div class="dialog-body">
-          <p style="margin-top:0">{{ activeProject.summary }}</p>
-          <sc-if value="{{ activeProject.hasDetails }}" hint-placeholder-val="{{ false }}">
-            <ul style="padding-left:18px;margin:0 0 12px">
-              <sc-for list="{{ activeProject.details }}" as="d" hint-placeholder-count="3">
-                <li style="margin-bottom:8px;line-height:1.55"><strong style="font-weight:500;color:var(--color-accent-300)">{{ d.b }}</strong> {{ d.t }}</li>
-              </sc-for>
-            </ul>
-          </sc-if>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px">
-            <sc-for list="{{ activeProject.tech }}" as="t" hint-placeholder-count="4">
-              <span class="tag tag-neutral">{{ t }}</span>
-            </sc-for>
-          </div>
-          <sc-if value="{{ activeProject.link }}" hint-placeholder-val="{{ false }}">
-            <a href="{{ activeProject.link }}" target="_blank" style="font-size:13px">{{ activeProject.linkLabel }}</a>
-          </sc-if>
-        </div>
-        <div class="dialog-actions">
-          <button class="btn btn-secondary" onClick="{{ closeProject }}">Close</button>
-        </div>
+  <div id="dlg" class="dialog-backdrop" style="z-index:100" hidden>
+    <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dlgTitle" style="max-width:600px;max-height:86vh;overflow-y:auto;overscroll-behavior:contain;animation:dlgIn .5s cubic-bezier(.16,1,.3,1) both">
+      <div id="dlgTitle" class="dialog-title"></div>
+      <div id="dlgBody" class="dialog-body"></div>
+      <div class="dialog-actions">
+        <button id="dlgClose" class="btn btn-secondary">Close</button>
       </div>
     </div>
-  </sc-if>
+  </div>
 
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;scrollEase&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.085,&quot;min&quot;:0.04,&quot;max&quot;:0.2,&quot;step&quot;:0.005,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;cursorGlow&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;showMarquee&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
-class Component extends DCLogic {
-  state = { activeProject: null };
-  el = {};
-  mk = (k) => (node) => { this.el[k] = node; };
-  refRoot = this.mk('root'); refBar = this.mk('bar'); refGlow = this.mk('glow');
-  refBlob1 = this.mk('blob1'); refBlob2 = this.mk('blob2');
-  refHeroText = this.mk('heroText'); refStage = this.mk('stage'); refBadge = this.mk('badge');
-  refRow1 = this.mk('row1'); refRow2 = this.mk('row2');
-  refExpList = this.mk('expList'); refExpFill = this.mk('expFill');
-  refPin = this.mk('pin'); refTrack = this.mk('track'); refProjCount = this.mk('projCount'); refProjBar = this.mk('projBar');
-  refContactText = this.mk('contactText');
-  setCanvasHost = (n) => { this._canvasHost = n; };
 
-  componentDidMount() {
-    this._lastY = window.scrollY; this._skew = 0; this._dist = 0;
-    this._mx = -999; this._my = -999; this._gx = -999; this._gy = -999;
-    this._px = 0; this._py = 0;
-    this._layers = this.el.stage ? Array.from(this.el.stage.querySelectorAll('[data-depth]')) : null;
-    this._dots = Array.from(this.el.root ? this.el.root.querySelectorAll('[data-dot]') : []);
-    this.initReveal();
-    this.initSmoothScroll();
-    this.initNav();
-    this.initMagnetic();
-    this.layoutPin();
-    this._onResize = () => this.layoutPin();
-    window.addEventListener('resize', this._onResize);
-    this._layoutT = setTimeout(this._onResize, 500);
-    this._onMouse = (e) => { this._mx = e.clientX; this._my = e.clientY; };
-    window.addEventListener('mousemove', this._onMouse, { passive: true });
-    this.tick();
-    this.initScene();
-  }
+<script type="module">
+const SCROLL_EASE = 0.085;
+const CURSOR_GLOW = true;
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this._onResize);
-    window.removeEventListener('mousemove', this._onMouse);
-    window.removeEventListener('wheel', this._onWheel);
-    window.removeEventListener('scroll', this._onExternal);
-    window.removeEventListener('keydown', this._onExternal);
-    document.removeEventListener('click', this._onClick);
-    clearTimeout(this._layoutT); (this._sweepTs || []).forEach(clearTimeout);
-    [this._fxRaf, this._smoothRaf, this._raf].forEach((r) => r && cancelAnimationFrame(r));
-    [this._revealIO, this._navIO, this._resizeObs].forEach((o) => o && o.disconnect());
-  }
+const skillGroups = [
+  { label: 'Frontend', items: ['HTML5', 'CSS3', 'jQuery', 'Bootstrap', 'ReactJS & Next.js (familiarity)'] },
+  { label: 'Backend', items: ['Core PHP', 'Laravel (Basic)'] },
+  { label: 'Database', items: ['MongoDB', 'Redis', 'MySQL (Basic)'] },
+  { label: 'DevOps & Tools', items: ['Git', 'Bitbucket', 'Jenkins', 'Azure DevOps', 'Google Cloud', 'MongoDB Atlas'] },
+  { label: 'Others', items: ['REST API', 'Figma', 'Agile methodology'] },
+];
 
-  initReveal() {
-    const root = this.el.root; if (!root) return;
-    const ease = 'cubic-bezier(.16,1,.3,1)';
-    const hid = { up: 'translate3d(0,48px,0)', mask: 'translate3d(0,110%,0)', right: 'translate3d(90px,0,0)', scale: 'scale(.9)' };
-    const map = new Map();
-    root.querySelectorAll('[data-reveal]').forEach((el) => {
-      const t = el.dataset.reveal || 'up';
-      const d = parseFloat(el.dataset.delay || '0') || 0;
-      el.style.transition = `opacity 1s ${ease} ${d}s, transform 1.2s ${ease} ${d}s, filter 1s ${ease} ${d}s, clip-path 1.5s ${ease} ${d}s`;
-      if (t === 'clip') el.style.clipPath = 'inset(100% 0 0 0)';
-      else {
-        el.style.transform = hid[t] || hid.up;
-        if (t !== 'mask') { el.style.opacity = '0'; el.style.filter = 'blur(8px)'; }
-      }
-      const target = (t === 'mask' || t === 'clip') ? el.parentElement : el;
-      map.set(target, (map.get(target) || []).concat(el));
-    });
-    void root.offsetHeight;
-    const show = (el) => {
-      el.dataset.revealed = '1';
-      el.style.transform = 'none'; el.style.opacity = '1'; el.style.filter = 'none';
-      if (el.dataset.reveal === 'clip') el.style.clipPath = 'inset(0% 0 0 0)';
-    };
-    this._revealIO = new IntersectionObserver((ents) => ents.forEach((en) => {
-      if (en.isIntersecting) { (map.get(en.target) || []).forEach(show); this._revealIO.unobserve(en.target); }
-    }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-    map.forEach((_, k) => this._revealIO.observe(k));
-    this._showRevealed = () => root.querySelectorAll('[data-revealed]').forEach(show);
-    const sweep = () => {
-      const vh = window.innerHeight;
-      map.forEach((els, k) => { const r = k.getBoundingClientRect(); if (r.top < vh && r.bottom > 0) { els.forEach(show); this._revealIO.unobserve(k); } });
-    };
-    this._sweepTs = [60, 300, 1200].map((t) => setTimeout(sweep, t));
-  }
+const marqueeWords = ['Core PHP', 'Laravel', 'ReactJS', 'NodeJS', 'ExpressJS', 'MongoDB', 'Redis', 'MySQL'];
+const marqueeWords2 = ['REST API', 'Jenkins', 'Git', 'Azure DevOps', 'Google Cloud', 'Bootstrap', 'jQuery', 'Figma'];
 
-  componentDidUpdate() { this._showRevealed && this._showRevealed(); }
+const experience = [
+  { role: 'Senior Developer', company: 'Rigved IT Solutions, Mumbai — Client: Nuvoco Vistas Corp. Ltd.', dates: 'Sep-2025 - Present', bullets: [
+    'Developed and maintained web applications for Nuvoco business operations.',
+    'Worked with stakeholders to gather requirements and deliver solutions.',
+    'Implemented APIs, database integrations, and performance improvements.',
+    'Participated in production support and issue resolution.',
+  ]},
+  { role: 'Web Developer', company: 'Markets Mojo, Mumbai', dates: 'Jun-2024 - Feb-2025', bullets: [
+    'Developed scalable backend modules using PHP, MongoDB, and Redis for a fintech analytics platform.',
+    'Integrated CI/CD pipelines via Jenkins and Bitbucket for smooth deployment cycles.',
+    'Optimized MongoDB queries for high-frequency stock data processing.',
+    'Developed a feature to process 50K+ Excel rows, compare with the database, and generate price mismatch reports.',
+  ]},
+  { role: 'PHP Full Stack Developer', company: 'Datamax Infotech, Mumbai', dates: 'Sep-2023 - Jun-2024', bullets: [
+    'Engineered ERP system with real-time task and time tracking; improved productivity by 30%.',
+    "Designed the 'UCB Zero Waste' inventory system, reducing operational waste by 25%.",
+    'Crafted a responsive UI using JavaScript and Bootstrap.',
+  ]},
+  { role: 'Full Stack Developer', company: 'Nexdigm Pvt. Ltd, Mumbai', dates: 'Aug-2021 - May-2023', bullets: [
+    'Built a CMS-based Management Information System (MIS) tool.',
+    'Using Agile methodology and role-based permission systems, granular user access was enabled.',
+    'Created Excel export and reporting modules to support operational decisions.',
+    'Converted an existing project to the MERN stack.',
+    "Created a Data Flow Diagram (DFD) for the client's team process by using Microsoft Visio.",
+  ]},
+  { role: 'UI Developer', company: 'R.K. Swamy BBDO Pvt. Ltd, Mumbai', dates: 'Aug-2019 - Aug-2021', bullets: [
+    'Converted PSD designs into pixel-perfect, responsive web applications.',
+    'Developed a StockHolding wealth management dashboard with dynamic visualizations.',
+    "Implemented Gmmco's equipment management portal for industrial clients.",
+  ]},
+  { role: 'Jr Full Stack Web Developer', company: 'Ginfomedia Solutions, Mumbai', dates: 'Jun-2018 - Jul-2019', bullets: [
+    'Delivered full-stack development for client websites using PHP, JS, and MySQL.',
+    'Managed end-to-end QA testing and bug fixes for production releases.',
+  ]},
+];
 
-  initSmoothScroll() {
-    const de = document.documentElement;
-    const maxScroll = () => de.scrollHeight - window.innerHeight;
-    const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
-    this._targetY = this._curY = window.scrollY; this._ticking = false;
-    const loop = () => {
-      const k = this.props.scrollEase ?? 0.085;
-      this._curY += (this._targetY - this._curY) * k;
-      if (Math.abs(this._targetY - this._curY) < 0.5) {
-        this._curY = this._targetY; de.scrollTop = this._curY; this._ticking = false; return;
-      }
-      de.scrollTop = this._curY;
-      this._smoothRaf = requestAnimationFrame(loop);
-    };
-    this._start = () => { if (!this._ticking) { this._ticking = true; this._smoothRaf = requestAnimationFrame(loop); } };
-    this._onWheel = (e) => {
-      if (e.ctrlKey || this.state.activeProject) return;
-      e.preventDefault();
-      const d = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
-      this._targetY = clamp(this._targetY + d, 0, maxScroll());
-      this._start();
-    };
-    this._onExternal = () => { if (!this._ticking) { this._curY = this._targetY = window.scrollY; } };
-    this._onClick = (e) => {
-      const a = e.target.closest && e.target.closest('a[href^="#"]'); if (!a) return;
-      const t = document.getElementById(a.getAttribute('href').slice(1)); if (!t) return;
-      e.preventDefault();
-      if (!this._ticking) this._curY = window.scrollY;
-      this._targetY = clamp(t.getBoundingClientRect().top + window.scrollY - 40, 0, maxScroll());
-      this._start();
-    };
-    window.addEventListener('wheel', this._onWheel, { passive: false });
-    window.addEventListener('scroll', this._onExternal, { passive: true });
-    window.addEventListener('keydown', this._onExternal, { passive: true });
-    document.addEventListener('click', this._onClick);
-  }
+const projects = [
+  { kicker: 'NUVOCO VISTAS · OCT 2025 – PRESENT', name: 'STARS', summary: 'Safety Tracking, Analysis & Reporting System for a multi-plant cement & RMX manufacturer.',
+    tech: ['PHP (Custom MVC)', 'MySQL', 'JavaScript', 'Bootstrap', 'ApexCharts', 'LDAP SSO', 'Redis', 'PhpSpreadsheet'],
+    details: [
+      '5 safety modules::UA/UC, Near Miss, Injury, Engagement and KPI tracking.',
+      'Multi-level workflows::role-based approvals, LDAP SSO and work delegation.',
+      'Live dashboards::plant, zone and country-level analytics with ApexCharts.',
+      'Automation & data::rule-driven email alerts, Excel reports, legacy migration and DB tuning.',
+    ], link: 'https://nuvstar.nuvoco.in/', linkLabel: 'nuvstar.nuvoco.in' },
+  { kicker: 'NUVOCO VISTAS · INTERNAL', name: 'NEA Awards', summary: 'Nuvoco Edge Award Management System — corporate awards & nomination platform.',
+    tech: ['PHP', 'MySQL', 'jQuery', 'Bootstrap', 'SAML 2.0 SSO', 'DataTables', 'SheetJS'],
+    details: [
+      'Enterprise SSO::SAML 2.0 single sign-on with role-based access for 4 user types.',
+      'Multi-level voting::2 cycles, financial-year deadlines and selection limits, with a full audit log.',
+      'Admin dashboard::analytics, DataTables CRUD, bulk Excel import and template-based emails.',
+    ] },
+  { kicker: 'NUVOCO VISTAS CORP. LTD.', name: 'LIEO', summary: 'Late-IN / Early-OUT Approval System for Contract Workers.',
+    tech: ['PHP', 'MySQL', 'JavaScript', 'jQuery', 'Bootstrap 4', 'DataTables', 'SheetJS', 'PHPMailer'],
+    details: [
+      '5-level approval workflow::Section Incharge → Time Office → N-1 → HOD → Security, built from scratch.',
+      'Configurable Approval Matrix::approvers per plant and department, with role-based data access.',
+      'Dashboards & tracker::status, audit trail and remarks with rich filters for every approver level.',
+      'Automation::email alerts at every step, auto-created approver logins, bulk Excel onboarding and custom XLSX export.',
+    ], link: 'https://vms.nuvoco.in/lieo/login.php', linkLabel: 'vms.nuvoco.in/lieo' },
+  { kicker: 'FINTECH', name: 'Markets Mojo', summary: 'Fintech platform for stock market analysis and research insights.',
+    tech: ['PHP', 'MongoDB', 'Redis', 'Jenkins', 'Bitbucket'],
+    details: ['Scalable backend modules for a fintech analytics platform.', 'CI/CD pipelines via Jenkins and Bitbucket.', 'Optimized MongoDB queries for high-frequency stock data.', 'Processes 50K+ Excel rows into price mismatch reports.'],
+    link: 'https://www.marketsmojo.com/', linkLabel: 'marketsmojo.com' },
+  { kicker: 'ERP & INVENTORY', name: 'Datamax Infotech', summary: 'UCB Zero Waste inventory system and a real-time task/time tracking tool.',
+    tech: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Ajax', 'Bootstrap', 'Git'],
+    details: ['UCB Zero Waste: inventory system reducing waste for a US-based client, cutting operational waste by 25%.', 'Task Time Tracking System: tracks tasks and stores timing in the DB alongside Asana.', 'Overall ERP system improved productivity by 30%.'], link: 'https://ucbzerowaste.com/', linkLabel: 'ucbzerowaste.com' },
+  { kicker: 'CMS & MERN MIGRATION', name: 'Nexdigm Pvt. Ltd', summary: 'CMS-based Management Information System, plus a MERN stack migration.',
+    tech: ['PHP', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'JavaScript', 'jQuery', 'ReactJS', 'Git', 'Azure DevOps', 'MongoDB Atlas'],
+    details: ['MIS tool with automated email reminders, role-based access, and Excel reports.', 'Converted an existing PHP/HTML/CSS project to MongoDB, ExpressJS, ReactJS, and Node.js.'] },
+  { kicker: 'AGENCY WORK', name: 'R.K. Swamy BBDO', summary: 'Gmmco equipment portal and StockHolding wealth management dashboard.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Photoshop', 'Figma'],
+    details: ['Converted PSD designs into pixel-perfect, responsive web applications.', 'Built a StockHolding wealth management dashboard with dynamic visualizations.', "Implemented Gmmco's equipment management portal for industrial clients."], link: 'https://gmmco.in', linkLabel: 'gmmco.in' },
+  { kicker: 'PERSONAL PROJECT', name: 'Smart Investment Assistant', summary: 'Takes a stock data Excel file, suggests selling or buying, and generates a summary.',
+    tech: ['Python', 'NextJS', 'HTML', 'CSS', 'Bootstrap', 'ChatGPT API'],
+    details: [], link: 'https://github.com/Shaikh-Ashiq-Ali/smart_investment_assistant', linkLabel: 'github.com/Shaikh-Ashiq-Ali/smart_investment_assistant' },
+  { kicker: 'PERSONAL PROJECT', name: 'To-do List', summary: 'A task management app built on the MERN stack.',
+    tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
+    details: [], link: 'https://github.com/Shaikh-Ashiq-Ali/Todo-List', linkLabel: 'github.com/Shaikh-Ashiq-Ali/Todo-List' },
+];
 
-  initNav() {
-    const root = this.el.root; if (!root) return;
-    const links = root.querySelectorAll('[data-nav]');
-    this._navIO = new IntersectionObserver((ents) => ents.forEach((en) => {
-      if (!en.isIntersecting) return;
-      links.forEach((l) => { l.style.color = l.dataset.nav === en.target.id ? 'var(--color-accent-300)' : ''; });
-    }), { rootMargin: '-45% 0px -50% 0px' });
-    ['hero', 'about', 'skills', 'experience', 'projects', 'contact'].forEach((id) => { const s = document.getElementById(id); s && this._navIO.observe(s); });
-  }
+const $ = (id) => document.getElementById(id);
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const pad2 = (n) => String(n).padStart(2, '0');
+const splitDetail = (d) => { const i = d.indexOf('::'); return i < 0 ? { b: '', t: d } : { b: d.slice(0, i) + ' —', t: d.slice(i + 2) }; };
+const tags = (list, cls) => list.map((t) => `<span class="tag ${cls}">${t}</span>`).join('');
 
-  initMagnetic() {
-    const root = this.el.root; if (!root || !window.matchMedia('(pointer: fine)').matches) return;
-    root.querySelectorAll('[data-magnetic]').forEach((b) => {
-      b.style.transition = 'transform .4s cubic-bezier(.16,1,.3,1), background-color .2s, border-color .2s, color .2s';
-      b.addEventListener('mousemove', (e) => {
-        const r = b.getBoundingClientRect();
-        b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.25}px, ${(e.clientY - r.top - r.height / 2) * 0.35}px)`;
-      });
-      b.addEventListener('mouseleave', () => { b.style.transform = ''; });
-    });
-  }
+// ---- render data-driven sections ----
+const marquee = (words, dot) => [...words, ...words].map((m) => `<span style="display:flex;align-items:center;gap:.4em;padding-right:.4em">${m}<span style="width:.18em;height:.18em;border-radius:50%;${dot}"></span></span>`).join('');
+$('row1').innerHTML = marquee(marqueeWords, 'background:var(--color-accent)');
+$('row2').innerHTML = marquee(marqueeWords2, 'border:1px solid var(--color-accent)');
 
-  layoutPin = () => {
-    const E = this.el; if (!E.pin || !E.track) return;
-    this._dist = Math.max(0, E.track.scrollWidth - document.documentElement.clientWidth);
-    E.pin.style.height = (window.innerHeight + this._dist) + 'px';
-  };
+$('skillsGrid').innerHTML = skillGroups.map((g, i) => `
+  <div data-reveal="up" data-delay="${i * 0.08}" class="card elev-sm skill-card">
+    <div class="card-kicker">${g.label}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px">${tags(g.items, 'tag-neutral')}</div>
+  </div>`).join('');
 
-  tick = () => {
-    const E = this.el;
-    const y = window.scrollY, vh = window.innerHeight;
-    const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
-    const dy = y - this._lastY; this._lastY = y;
-    this._skew += (clamp(dy * 0.25, -10, 10) - this._skew) * 0.12;
+$('expList').insertAdjacentHTML('beforeend', experience.map((job) => `
+  <div data-reveal="up" style="position:relative;padding-left:40px">
+    <div data-dot="1" style="position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:50%;background:var(--color-neutral-700);transition:background .4s, box-shadow .4s"></div>
+    <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:6px">
+      <h4 style="margin:0;font-size:20px">${job.role}</h4>
+      <span style="font-size:13px;color:var(--color-accent-300);font-family:var(--font-heading);white-space:nowrap">${job.dates}</span>
+    </div>
+    <div style="font-size:14px;color:color-mix(in srgb, var(--color-text) 60%, transparent);margin-bottom:12px">${job.company}</div>
+    <ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.75;color:color-mix(in srgb, var(--color-text) 78%, transparent)">
+      ${job.bullets.map((b) => `<li>${b}</li>`).join('')}
+    </ul>
+  </div>`).join(''));
 
-    const docH = document.documentElement.scrollHeight - vh;
-    if (E.bar) E.bar.style.transform = `scaleX(${docH > 0 ? y / docH : 0})`;
+$('projTotal').textContent = pad2(projects.length);
+$('track').innerHTML = projects.map((p, i) => {
+  const host = p.link ? (p.linkLabel || new URL(p.link).hostname).replace(/^www\./, '') : '';
+  return `
+  <div data-reveal="right" data-delay="${Math.min(i, 3) * 0.08}" style="flex:none;width:min(440px,82vw)">
+    <div class="card elev-md" data-proj="${i}" tabindex="0" role="button" aria-label="${p.name} — view details" style="height:min(540px,calc(100vh - 230px));min-height:320px;box-sizing:border-box;display:flex;flex-direction:column;cursor:pointer;transition:transform .5s cubic-bezier(.16,1,.3,1), border-color .3s;will-change:transform">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+        <span style="font-size:40px;line-height:1;font-weight:500;letter-spacing:-0.03em;color:var(--color-neutral-700)">${pad2(i + 1)}</span>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:10px;min-width:0">
+          <span class="card-kicker" style="text-align:right">${p.kicker}</span>
+          ${p.link ? `
+          <a href="${p.link}" target="_blank" rel="noopener" class="proj-link" style="display:flex;align-items:center;gap:8px;padding:5px 10px 5px 6px;border:1px solid var(--color-divider);border-radius:999px;font-size:12px;text-decoration:none;color:var(--color-text);background:color-mix(in srgb, var(--color-bg) 60%, transparent);max-width:100%">
+            <img src="https://www.google.com/s2/favicons?sz=64&domain=${new URL(p.link).hostname}" alt="" style="width:18px;height:18px;border-radius:4px;background:var(--color-neutral-200);flex:none;object-fit:contain">
+            <span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${host}</span>
+            <span style="flex:none">↗</span>
+          </a>` : ''}
+        </div>
+      </div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px;margin-top:10px;min-height:0;overflow:hidden">
+        <div class="card-title" style="font-size:24px;letter-spacing:-0.015em;margin:0">${p.name}</div>
+        <p class="card-body" style="margin:0;text-wrap:pretty;flex:none">${p.summary}</p>
+        ${p.details.length ? `
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:13px;line-height:1.45;color:color-mix(in srgb, var(--color-text) 72%, transparent)">
+          ${p.details.slice(0, 4).map(splitDetail).map((d) => `<li style="display:flex;gap:10px"><span style="flex:none;width:5px;height:5px;margin-top:7px;border-radius:50%;background:var(--color-accent)"></span><span style="text-wrap:pretty;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden"><strong style="font-weight:500;color:var(--color-text)">${d.b}</strong> ${d.t}</span></li>`).join('')}
+        </ul>` : ''}
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;flex:none">${tags(p.tech.slice(0, 4), 'tag-accent-2')}</div>
+      <div class="card-meta" style="margin-top:10px;padding-top:10px;border-top:1px solid var(--color-divider);color:var(--color-accent-300)">View details →</div>
+    </div>
+  </div>`;
+}).join('');
 
-    const hp = clamp(y / vh, 0, 1);
-    if (E.heroText) { E.heroText.style.transform = `translate3d(0,${y * -0.18}px,0)`; E.heroText.style.opacity = String(1 - hp * 1.3); }
-    if (this._layers) {
-      const nx = this._mx > -999 ? this._mx / window.innerWidth - 0.5 : 0, ny = this._my > -999 ? this._my / vh - 0.5 : 0;
-      this._px += (nx - this._px) * 0.06; this._py += (ny - this._py) * 0.06;
-      this._layers.forEach((l) => { const d = +l.dataset.depth; l.style.transform = `translate3d(${this._px * d}px,${this._py * d + y * d * -0.006}px,0)`; });
-    }
-    if (E.badge) E.badge.style.transform = `rotate(${performance.now() * 0.012 + y * 0.2}deg)`;
-    if (E.blob1) E.blob1.style.transform = `translate3d(0,${y * 0.1}px,0)`;
-    if (E.blob2) E.blob2.style.transform = `translate3d(0,${y * -0.06}px,0)`;
+// ---- project dialog ----
+const dlg = $('dlg');
+let dialogOpen = false, lastFocus = null;
+const openProject = (p) => {
+  $('dlgTitle').textContent = p.name;
+  $('dlgBody').innerHTML = `
+    <p style="margin-top:0">${p.summary}</p>
+    ${p.details.length ? `<ul style="padding-left:18px;margin:0 0 12px">${p.details.map(splitDetail).map((d) => `<li style="margin-bottom:8px;line-height:1.55"><strong style="font-weight:500;color:var(--color-accent-300)">${d.b}</strong> ${d.t}</li>`).join('')}</ul>` : ''}
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px">${tags(p.tech, 'tag-neutral')}</div>
+    ${p.link ? `<a href="${p.link}" target="_blank" rel="noopener" style="font-size:13px">${p.linkLabel}</a>` : ''}`;
+  lastFocus = document.activeElement;
+  dlg.hidden = false; dialogOpen = true;
+  $('dlgClose').focus();
+};
+const closeProject = () => { dlg.hidden = true; dialogOpen = false; lastFocus && lastFocus.focus(); };
+dlg.addEventListener('click', (e) => { if (e.target === dlg) closeProject(); });
+$('dlgClose').addEventListener('click', closeProject);
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && dialogOpen) closeProject(); });
 
-    if (E.row1 && E.row1.isConnected) {
-      const band = E.row1.parentElement.getBoundingClientRect();
-      const off = (band.top + band.height / 2 - vh / 2) * 0.35;
-      const pad = window.innerWidth * 0.05;
-      const place = (row, dir) => {
-        const w = row.scrollWidth / 2 || 1;
-        const m = (((dir * off) % w) + w) % w;
-        let t = m - w + pad; if (t > 0) t -= w;
-        row.style.transform = `translate3d(${t}px,0,0) skewX(${-this._skew}deg)`;
-      };
-      place(E.row1, 1);
-      if (E.row2 && E.row2.isConnected) place(E.row2, -1);
-    }
-
-    if (E.expList && E.expFill) {
-      const r = E.expList.getBoundingClientRect();
-      E.expFill.style.transform = `scaleY(${clamp((vh * 0.6 - r.top) / r.height, 0, 1)})`;
-      this._dots.forEach((d) => {
-        const on = d.getBoundingClientRect().top < vh * 0.6;
-        if (d._on !== on) {
-          d._on = on;
-          d.style.background = on ? 'var(--color-accent)' : 'var(--color-neutral-700)';
-          d.style.boxShadow = on ? '0 0 0 4px color-mix(in srgb, var(--color-accent) 22%, transparent), 0 0 16px var(--color-accent)' : 'none';
-        }
-      });
-    }
-
-    if (E.pin && E.track) {
-      const r = E.pin.getBoundingClientRect();
-      const total = E.pin.offsetHeight - vh;
-      const p = total > 0 ? clamp(-r.top / total, 0, 1) : 0;
-      E.track.style.transform = `translate3d(${-p * this._dist}px,0,0)`;
-      if (E.projBar) E.projBar.style.transform = `scaleX(${p})`;
-      if (E.projCount) {
-        const n = this.projectsData.length;
-        const s = String(Math.min(n, Math.floor(p * n) + 1)).padStart(2, '0');
-        if (E.projCount.textContent !== s) E.projCount.textContent = s;
-      }
-    }
-
-    if (E.contactText) {
-      const r = E.contactText.getBoundingClientRect();
-      E.contactText.style.transform = `translate3d(${clamp(r.top, -vh, vh) * 0.45}px,0,0)`;
-    }
-
-    if (E.glow) {
-      const on = (this.props.cursorGlow ?? true) && this._mx > -999;
-      if (on) {
-        if (this._gx < -900) { this._gx = this._mx; this._gy = this._my; }
-        this._gx += (this._mx - this._gx) * 0.1; this._gy += (this._my - this._gy) * 0.1;
-        E.glow.style.transform = `translate3d(${this._gx - 300}px,${this._gy - 300}px,0)`;
-      }
-      E.glow.style.opacity = on ? '1' : '0';
-    }
-
-    this._fxRaf = requestAnimationFrame(this.tick);
-  };
-
-  async initScene() {
-    if (!this._canvasHost) return;
-    const THREE = await import('https://esm.sh/three@0.160.0');
-    const host = this._canvasHost; if (!host.isConnected) return;
-    const w = host.clientWidth || 420, h = host.clientHeight || 420;
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 100);
-    camera.position.set(0, 0, 6.2);
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(w, h);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-    host.innerHTML = '';
-    host.appendChild(renderer.domElement);
-    const accent = 0x9184d9;
-    const group = new THREE.Group();
-    const geo = new THREE.IcosahedronGeometry(2, 1);
-    group.add(new THREE.LineSegments(new THREE.WireframeGeometry(geo), new THREE.LineBasicMaterial({ color: accent, transparent: true, opacity: 0.85 })));
-    group.add(new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color: accent, transparent: true, opacity: 0.045 })));
-    group.add(new THREE.Points(new THREE.IcosahedronGeometry(2, 1), new THREE.PointsMaterial({ color: accent, size: 0.045, transparent: true, opacity: 0.9 })));
-    scene.add(group);
-    let mx = 0, my = 0;
-    host.addEventListener('mousemove', (e) => {
-      const r = host.getBoundingClientRect();
-      mx = ((e.clientX - r.left) / r.width - 0.5) * 2; my = ((e.clientY - r.top) / r.height - 0.5) * 2;
-    });
-    const clock = new THREE.Clock();
-    const animate = () => {
-      const t = clock.getElapsedTime(), sy = window.scrollY * 0.0015;
-      group.rotation.y = t * 0.22 + mx * 0.4 + sy;
-      group.rotation.x = Math.sin(t * 0.3) * 0.15 + my * 0.3 + sy * 0.4;
-      renderer.render(scene, camera);
-      this._raf = requestAnimationFrame(animate);
-    };
-    animate();
-    this._resizeObs = new ResizeObserver(() => {
-      const nw = host.clientWidth, nh = host.clientHeight; if (!nw || !nh) return;
-      renderer.setSize(nw, nh); camera.aspect = nw / nh; camera.updateProjectionMatrix();
-    });
-    this._resizeObs.observe(host);
-  }
-
-  onCardMove = (e) => {
-    const c = e.currentTarget, r = c.getBoundingClientRect();
+document.querySelectorAll('[data-proj]').forEach((c) => {
+  const p = projects[+c.dataset.proj];
+  c.addEventListener('click', (e) => { if (!e.target.closest('a')) openProject(p); });
+  c.addEventListener('keydown', (e) => { if ((e.key === 'Enter' || e.key === ' ') && e.target === c) { e.preventDefault(); openProject(p); } });
+  c.addEventListener('mousemove', (e) => {
+    const r = c.getBoundingClientRect();
     const px = (e.clientX - r.left) / r.width - 0.5, py = (e.clientY - r.top) / r.height - 0.5;
     c.style.transform = `perspective(900px) rotateX(${py * -6}deg) rotateY(${px * 8}deg) translateY(-6px)`;
     c.style.borderColor = 'var(--color-accent-700)';
+  });
+  c.addEventListener('mouseleave', () => { c.style.transform = ''; c.style.borderColor = ''; });
+});
+
+// ---- reveal on scroll ----
+(() => {
+  const ease = 'cubic-bezier(.16,1,.3,1)';
+  const hid = { up: 'translate3d(0,48px,0)', mask: 'translate3d(0,110%,0)', right: 'translate3d(90px,0,0)', scale: 'scale(.9)' };
+  const map = new Map();
+  document.querySelectorAll('[data-reveal]').forEach((el) => {
+    const t = el.dataset.reveal || 'up';
+    const d = parseFloat(el.dataset.delay || '0') || 0;
+    el.style.transition = `opacity 1s ${ease} ${d}s, transform 1.2s ${ease} ${d}s, filter 1s ${ease} ${d}s`;
+    el.style.transform = hid[t] || hid.up;
+    if (t !== 'mask') { el.style.opacity = '0'; el.style.filter = 'blur(8px)'; }
+    const target = t === 'mask' ? el.parentElement : el;
+    map.set(target, (map.get(target) || []).concat(el));
+  });
+  void document.body.offsetHeight;
+  const show = (el) => { el.style.transform = 'none'; el.style.opacity = '1'; el.style.filter = 'none'; };
+  const io = new IntersectionObserver((ents) => ents.forEach((en) => {
+    if (en.isIntersecting) { (map.get(en.target) || []).forEach(show); io.unobserve(en.target); }
+  }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  map.forEach((_, k) => io.observe(k));
+  // the pinned project track is translated sideways, so cards off to the right never intersect; sweep catches what's in view
+  const sweep = () => {
+    const vh = window.innerHeight;
+    map.forEach((els, k) => { const r = k.getBoundingClientRect(); if (r.top < vh && r.bottom > 0) { els.forEach(show); io.unobserve(k); } });
   };
-  onCardLeave = (e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.borderColor = ''; };
+  [60, 300, 1200].forEach((t) => setTimeout(sweep, t));
+})();
 
-  openProject = (p) => () => this.setState({ activeProject: p });
-  closeProject = () => this.setState({ activeProject: null });
-  stop = (e) => e.stopPropagation();
+// ---- smooth wheel scrolling ----
+(() => {
+  const de = document.documentElement;
+  const maxScroll = () => de.scrollHeight - window.innerHeight;
+  let targetY = window.scrollY, curY = targetY, ticking = false;
+  const loop = () => {
+    curY += (targetY - curY) * SCROLL_EASE;
+    if (Math.abs(targetY - curY) < 0.5) { curY = targetY; de.scrollTop = curY; ticking = false; return; }
+    de.scrollTop = curY;
+    requestAnimationFrame(loop);
+  };
+  const start = () => { if (!ticking) { ticking = true; requestAnimationFrame(loop); } };
+  window.addEventListener('wheel', (e) => {
+    if (e.ctrlKey || dialogOpen) return;
+    e.preventDefault();
+    const d = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
+    targetY = clamp(targetY + d, 0, maxScroll());
+    start();
+  }, { passive: false });
+  const onExternal = () => { if (!ticking) curY = targetY = window.scrollY; };
+  window.addEventListener('scroll', onExternal, { passive: true });
+  window.addEventListener('keydown', onExternal, { passive: true });
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('a[href^="#"]'); if (!a) return;
+    const t = document.getElementById(a.getAttribute('href').slice(1)); if (!t) return;
+    e.preventDefault();
+    if (!ticking) curY = window.scrollY;
+    targetY = clamp(t.getBoundingClientRect().top + window.scrollY - 40, 0, maxScroll());
+    start();
+  });
+})();
 
-  skillGroups = [
-    { label: 'Frontend', items: ['HTML5', 'CSS3', 'jQuery', 'Bootstrap', 'ReactJS & Next.js (familiarity)'] },
-    { label: 'Backend', items: ['Core PHP', 'Laravel (Basic)'] },
-    { label: 'Database', items: ['MongoDB', 'Redis', 'MySQL (Basic)'] },
-    { label: 'DevOps & Tools', items: ['Git', 'Bitbucket', 'Jenkins', 'Azure DevOps', 'Google Cloud', 'MongoDB Atlas'] },
-    { label: 'Others', items: ['REST API', 'Figma', 'Agile methodology'] },
-  ];
+// ---- active nav link ----
+(() => {
+  const links = document.querySelectorAll('[data-nav]');
+  const io = new IntersectionObserver((ents) => ents.forEach((en) => {
+    if (!en.isIntersecting) return;
+    links.forEach((l) => { l.style.color = l.dataset.nav === en.target.id ? 'var(--color-accent-300)' : ''; });
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  ['hero', 'about', 'skills', 'experience', 'projects', 'contact'].forEach((id) => io.observe($(id)));
+})();
 
-  marqueeWords = ['Core PHP', 'Laravel', 'ReactJS', 'NodeJS', 'ExpressJS', 'MongoDB', 'Redis', 'MySQL'];
-  marqueeWords2 = ['REST API', 'Jenkins', 'Git', 'Azure DevOps', 'Google Cloud', 'Bootstrap', 'jQuery', 'Figma'];
-
-  experienceData = [
-    { role: 'Senior Developer', company: 'Rigved IT Solutions, Mumbai — Client: Nuvoco Vistas Corp. Ltd.', dates: 'Sep-2025 - Present', bullets: [
-      'Developed and maintained web applications for Nuvoco business operations.',
-      'Worked with stakeholders to gather requirements and deliver solutions.',
-      'Implemented APIs, database integrations, and performance improvements.',
-      'Participated in production support and issue resolution.',
-    ]},
-    { role: 'Web Developer', company: 'Markets Mojo, Mumbai', dates: 'Jun-2024 - Feb-2025', bullets: [
-      'Developed scalable backend modules using PHP, MongoDB, and Redis for a fintech analytics platform.',
-      'Integrated CI/CD pipelines via Jenkins and Bitbucket for smooth deployment cycles.',
-      'Optimized MongoDB queries for high-frequency stock data processing.',
-      'Developed a feature to process 50K+ Excel rows, compare with the database, and generate price mismatch reports.',
-    ]},
-    { role: 'PHP Full Stack Developer', company: 'Datamax Infotech, Mumbai', dates: 'Sep-2023 - Jun-2024', bullets: [
-      'Engineered ERP system with real-time task and time tracking; improved productivity by 30%.',
-      "Designed the 'UCB Zero Waste' inventory system, reducing operational waste by 25%.",
-      'Crafted a responsive UI using JavaScript and Bootstrap.',
-    ]},
-    { role: 'Full Stack Developer', company: 'Nexdigm Pvt. Ltd, Mumbai', dates: 'Aug-2021 - May-2023', bullets: [
-      'Built a CMS-based Management Information System (MIS) tool.',
-      'Using Agile methodology and role-based permission systems, granular user access was enabled.',
-      'Created Excel export and reporting modules to support operational decisions.',
-      'Converted an existing project to the MERN stack.',
-      "Created a Data Flow Diagram (DFD) for the client's team process by using Microsoft Visio.",
-    ]},
-    { role: 'UI Developer', company: 'R.K. Swamy BBDO Pvt. Ltd, Mumbai', dates: 'Aug-2019 - Aug-2021', bullets: [
-      'Converted PSD designs into pixel-perfect, responsive web applications.',
-      'Developed a StockHolding wealth management dashboard with dynamic visualizations.',
-      "Implemented Gmmco's equipment management portal for industrial clients.",
-    ]},
-    { role: 'Jr Full Stack Web Developer', company: 'Ginfomedia Solutions, Mumbai', dates: 'Jun-2018 - Jul-2019', bullets: [
-      'Delivered full-stack development for client websites using PHP, JS, and MySQL.',
-      'Managed end-to-end QA testing and bug fixes for production releases.',
-    ]},
-  ];
-
-  projectsData = [
-    { kicker: 'NUVOCO VISTAS · OCT 2025 – PRESENT', name: 'STARS', summary: 'Safety Tracking, Analysis & Reporting System for a multi-plant cement & RMX manufacturer.',
-      tech: ['PHP (Custom MVC)', 'MySQL', 'JavaScript', 'Bootstrap', 'ApexCharts', 'LDAP SSO', 'Redis', 'PhpSpreadsheet'],
-      details: [
-        '5 safety modules::UA/UC, Near Miss, Injury, Engagement and KPI tracking.',
-        'Multi-level workflows::role-based approvals, LDAP SSO and work delegation.',
-        'Live dashboards::plant, zone and country-level analytics with ApexCharts.',
-        'Automation & data::rule-driven email alerts, Excel reports, legacy migration and DB tuning.',
-      ], link: 'https://nuvstar.nuvoco.in/', linkLabel: 'nuvstar.nuvoco.in' },
-    { kicker: 'NUVOCO VISTAS · INTERNAL', name: 'NEA Awards', summary: 'Nuvoco Edge Award Management System — corporate awards & nomination platform.',
-      tech: ['PHP', 'MySQL', 'jQuery', 'Bootstrap', 'SAML 2.0 SSO', 'DataTables', 'SheetJS'],
-      details: [
-        'Enterprise SSO::SAML 2.0 single sign-on with role-based access for 4 user types.',
-        'Multi-level voting::2 cycles, financial-year deadlines and selection limits, with a full audit log.',
-        'Admin dashboard::analytics, DataTables CRUD, bulk Excel import and template-based emails.',
-      ] },
-    { kicker: 'NUVOCO VISTAS CORP. LTD.', name: 'LIEO', summary: 'Late-IN / Early-OUT Approval System for Contract Workers.',
-      tech: ['PHP', 'MySQL', 'JavaScript', 'jQuery', 'Bootstrap 4', 'DataTables', 'SheetJS', 'PHPMailer'],
-      details: [
-        '5-level approval workflow::Section Incharge → Time Office → N-1 → HOD → Security, built from scratch.',
-        'Configurable Approval Matrix::approvers per plant and department, with role-based data access.',
-        'Dashboards & tracker::status, audit trail and remarks with rich filters for every approver level.',
-        'Automation::email alerts at every step, auto-created approver logins, bulk Excel onboarding and custom XLSX export.',
-      ], link: 'https://vms.nuvoco.in/lieo/login.php', linkLabel: 'vms.nuvoco.in/lieo' },
-    { kicker: 'FINTECH', name: 'Markets Mojo', summary: 'Fintech platform for stock market analysis and research insights.',
-      tech: ['PHP', 'MongoDB', 'Redis', 'Jenkins', 'Bitbucket'],
-      details: ['Scalable backend modules for a fintech analytics platform.', 'CI/CD pipelines via Jenkins and Bitbucket.', 'Optimized MongoDB queries for high-frequency stock data.', 'Processes 50K+ Excel rows into price mismatch reports.'],
-      link: 'https://www.marketsmojo.com/', linkLabel: 'marketsmojo.com' },
-    { kicker: 'ERP & INVENTORY', name: 'Datamax Infotech', summary: 'UCB Zero Waste inventory system and a real-time task/time tracking tool.',
-      tech: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Ajax', 'Bootstrap', 'Git'],
-      details: ['UCB Zero Waste: inventory system reducing waste for a US-based client, cutting operational waste by 25%.', 'Task Time Tracking System: tracks tasks and stores timing in the DB alongside Asana.', 'Overall ERP system improved productivity by 30%.'], link: 'https://ucbzerowaste.com/', linkLabel: 'ucbzerowaste.com' },
-    { kicker: 'CMS & MERN MIGRATION', name: 'Nexdigm Pvt. Ltd', summary: 'CMS-based Management Information System, plus a MERN stack migration.',
-      tech: ['PHP', 'NodeJS', 'MongoDB', 'HTML', 'CSS', 'JavaScript', 'jQuery', 'ReactJS', 'Git', 'Azure DevOps', 'MongoDB Atlas'],
-      details: ['MIS tool with automated email reminders, role-based access, and Excel reports.', 'Converted an existing PHP/HTML/CSS project to MongoDB, ExpressJS, ReactJS, and Node.js.'] },
-    { kicker: 'AGENCY WORK', name: 'R.K. Swamy BBDO', summary: 'Gmmco equipment portal and StockHolding wealth management dashboard.',
-      tech: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Photoshop', 'Figma'],
-      details: ['Converted PSD designs into pixel-perfect, responsive web applications.', 'Built a StockHolding wealth management dashboard with dynamic visualizations.', "Implemented Gmmco's equipment management portal for industrial clients."], link: 'https://gmmco.in', linkLabel: 'gmmco.in' },
-    { kicker: 'PERSONAL PROJECT', name: 'Smart Investment Assistant', summary: 'Takes a stock data Excel file, suggests selling or buying, and generates a summary.',
-      tech: ['Python', 'NextJS', 'HTML', 'CSS', 'Bootstrap', 'ChatGPT API'],
-      details: [], link: 'https://github.com/Shaikh-Ashiq-Ali/smart_investment_assistant', linkLabel: 'github.com/Shaikh-Ashiq-Ali/smart_investment_assistant' },
-    { kicker: 'PERSONAL PROJECT', name: 'To-do List', summary: 'A task management app built on the MERN stack.',
-      tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
-      details: [], link: 'https://github.com/Shaikh-Ashiq-Ali/Todo-List', linkLabel: 'github.com/Shaikh-Ashiq-Ali/Todo-List' },
-  ];
-
-  splitDetail = (d) => { const i = d.indexOf('::'); return i < 0 ? { b: '', t: d } : { b: d.slice(0, i) + ' —', t: d.slice(i + 2) }; };
-
-  renderVals() {
-    const n = this.projectsData.length;
-    const ap = this.state.activeProject;
-    return {
-      refRoot: this.refRoot, refBar: this.refBar, refGlow: this.refGlow, refBlob1: this.refBlob1, refBlob2: this.refBlob2,
-      refHeroText: this.refHeroText, refStage: this.refStage, refBadge: this.refBadge, refRow1: this.refRow1, refRow2: this.refRow2,
-      refExpList: this.refExpList, refExpFill: this.refExpFill, refPin: this.refPin, refTrack: this.refTrack,
-      refProjCount: this.refProjCount, refProjBar: this.refProjBar, refContactText: this.refContactText,
-      setCanvasHost: this.setCanvasHost,
-      showMarquee: this.props.showMarquee ?? true,
-      marquee: [...this.marqueeWords, ...this.marqueeWords],
-      marquee2: [...this.marqueeWords2, ...this.marqueeWords2],
-      skillGroups: this.skillGroups.map((g, i) => ({ ...g, delay: String(i * 0.08) })),
-      experience: this.experienceData,
-      projectTotal: String(n).padStart(2, '0'),
-      projects: this.projectsData.map((p, i) => ({
-        ...p,
-        num: String(i + 1).padStart(2, '0'),
-        delay: String(Math.min(i, 3) * 0.08),
-        techPreview: p.tech.slice(0, 4),
-        link: p.link || '',
-        host: p.link ? (p.linkLabel || new URL(p.link).hostname).replace(/^www\./, '') : '',
-        favicon: p.link ? 'https://www.google.com/s2/favicons?sz=64&domain=' + new URL(p.link).hostname : '',
-        hasDetails: p.details.length > 0,
-        detailsPreview: p.details.slice(0, 4).map(this.splitDetail),
-        onOpen: this.openProject(p),
-      })),
-      onCardMove: this.onCardMove,
-      onCardLeave: this.onCardLeave,
-      activeProject: ap ? { ...ap, details: ap.details.map(this.splitDetail), hasDetails: ap.details && ap.details.length > 0 } : null,
-      closeProject: this.closeProject,
-      stop: this.stop,
-    };
-  }
+// ---- magnetic buttons ----
+if (window.matchMedia('(pointer: fine)').matches) {
+  document.querySelectorAll('[data-magnetic]').forEach((b) => {
+    b.style.transition = 'transform .4s cubic-bezier(.16,1,.3,1), background-color .2s, border-color .2s, color .2s';
+    b.addEventListener('mousemove', (e) => {
+      const r = b.getBoundingClientRect();
+      b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.25}px, ${(e.clientY - r.top - r.height / 2) * 0.35}px)`;
+    });
+    b.addEventListener('mouseleave', () => { b.style.transform = ''; });
+  });
 }
+
+// ---- per-frame scroll / pointer effects ----
+const E = Object.fromEntries(['bar', 'glow', 'blob1', 'blob2', 'heroText', 'badge', 'row1', 'row2', 'expList', 'expFill', 'track', 'projCount', 'projBar', 'contactText'].map((k) => [k, $(k)]));
+E.pin = $('projects');
+const layers = Array.from($('stage').querySelectorAll('[data-depth]'));
+const dots = Array.from(document.querySelectorAll('[data-dot]'));
+let lastY = window.scrollY, skew = 0, dist = 0, mx = -999, my = -999, gx = -999, gy = -999, ppx = 0, ppy = 0;
+
+const layoutPin = () => {
+  dist = Math.max(0, E.track.scrollWidth - document.documentElement.clientWidth);
+  E.pin.style.height = (window.innerHeight + dist) + 'px';
+};
+layoutPin();
+window.addEventListener('resize', layoutPin);
+window.addEventListener('load', layoutPin);
+window.addEventListener('mousemove', (e) => { mx = e.clientX; my = e.clientY; }, { passive: true });
+
+const tick = () => {
+  const y = window.scrollY, vh = window.innerHeight;
+  const dy = y - lastY; lastY = y;
+  skew += (clamp(dy * 0.25, -10, 10) - skew) * 0.12;
+
+  const docH = document.documentElement.scrollHeight - vh;
+  E.bar.style.transform = `scaleX(${docH > 0 ? y / docH : 0})`;
+
+  const hp = clamp(y / vh, 0, 1);
+  E.heroText.style.transform = `translate3d(0,${y * -0.18}px,0)`;
+  E.heroText.style.opacity = String(1 - hp * 1.3);
+  const nx = mx > -999 ? mx / window.innerWidth - 0.5 : 0, ny = my > -999 ? my / vh - 0.5 : 0;
+  ppx += (nx - ppx) * 0.06; ppy += (ny - ppy) * 0.06;
+  layers.forEach((l) => { const d = +l.dataset.depth; l.style.transform = `translate3d(${ppx * d}px,${ppy * d + y * d * -0.006}px,0)`; });
+  E.badge.style.transform = `rotate(${performance.now() * 0.012 + y * 0.2}deg)`;
+  E.blob1.style.transform = `translate3d(0,${y * 0.1}px,0)`;
+  E.blob2.style.transform = `translate3d(0,${y * -0.06}px,0)`;
+
+  const band = E.row1.parentElement.getBoundingClientRect();
+  const off = (band.top + band.height / 2 - vh / 2) * 0.35;
+  const gutter = window.innerWidth * 0.05;
+  const place = (row, dir) => {
+    const w = row.scrollWidth / 2 || 1;
+    const m = (((dir * off) % w) + w) % w;
+    let t = m - w + gutter; if (t > 0) t -= w;
+    row.style.transform = `translate3d(${t}px,0,0) skewX(${-skew}deg)`;
+  };
+  place(E.row1, 1);
+  place(E.row2, -1);
+
+  const er = E.expList.getBoundingClientRect();
+  E.expFill.style.transform = `scaleY(${clamp((vh * 0.6 - er.top) / er.height, 0, 1)})`;
+  dots.forEach((d) => {
+    const on = d.getBoundingClientRect().top < vh * 0.6;
+    if (d._on !== on) {
+      d._on = on;
+      d.style.background = on ? 'var(--color-accent)' : 'var(--color-neutral-700)';
+      d.style.boxShadow = on ? '0 0 0 4px color-mix(in srgb, var(--color-accent) 22%, transparent), 0 0 16px var(--color-accent)' : 'none';
+    }
+  });
+
+  const pr = E.pin.getBoundingClientRect();
+  const total = E.pin.offsetHeight - vh;
+  const p = total > 0 ? clamp(-pr.top / total, 0, 1) : 0;
+  E.track.style.transform = `translate3d(${-p * dist}px,0,0)`;
+  E.projBar.style.transform = `scaleX(${p})`;
+  const s = pad2(Math.min(projects.length, Math.floor(p * projects.length) + 1));
+  if (E.projCount.textContent !== s) E.projCount.textContent = s;
+
+  const cr = E.contactText.getBoundingClientRect();
+  E.contactText.style.transform = `translate3d(${clamp(cr.top, -vh, vh) * 0.45}px,0,0)`;
+
+  const glowOn = CURSOR_GLOW && mx > -999;
+  if (glowOn) {
+    if (gx < -900) { gx = mx; gy = my; }
+    gx += (mx - gx) * 0.1; gy += (my - gy) * 0.1;
+    E.glow.style.transform = `translate3d(${gx - 300}px,${gy - 300}px,0)`;
+  }
+  E.glow.style.opacity = glowOn ? '1' : '0';
+
+  requestAnimationFrame(tick);
+};
+tick();
+
+// ---- wireframe icosahedron (about section) ----
+(async () => {
+  const host = $('canvasHost');
+  const THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
+  const w = host.clientWidth || 420, h = host.clientHeight || 420;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 100);
+  camera.position.set(0, 0, 6.2);
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setSize(w, h);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  host.appendChild(renderer.domElement);
+  const accent = 0x9184d9;
+  const group = new THREE.Group();
+  const geo = new THREE.IcosahedronGeometry(2, 1);
+  group.add(new THREE.LineSegments(new THREE.WireframeGeometry(geo), new THREE.LineBasicMaterial({ color: accent, transparent: true, opacity: 0.85 })));
+  group.add(new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ color: accent, transparent: true, opacity: 0.045 })));
+  group.add(new THREE.Points(geo, new THREE.PointsMaterial({ color: accent, size: 0.045, transparent: true, opacity: 0.9 })));
+  scene.add(group);
+  let hx = 0, hy = 0;
+  host.addEventListener('mousemove', (e) => {
+    const r = host.getBoundingClientRect();
+    hx = ((e.clientX - r.left) / r.width - 0.5) * 2; hy = ((e.clientY - r.top) / r.height - 0.5) * 2;
+  });
+  const clock = new THREE.Clock();
+  const animate = () => {
+    const t = clock.getElapsedTime(), sy = window.scrollY * 0.0015;
+    group.rotation.y = t * 0.22 + hx * 0.4 + sy;
+    group.rotation.x = Math.sin(t * 0.3) * 0.15 + hy * 0.3 + sy * 0.4;
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+  };
+  animate();
+  new ResizeObserver(() => {
+    const nw = host.clientWidth, nh = host.clientHeight; if (!nw || !nh) return;
+    renderer.setSize(nw, nh); camera.aspect = nw / nh; camera.updateProjectionMatrix();
+  }).observe(host);
+})();
 </script>
 </body>
 </html>
